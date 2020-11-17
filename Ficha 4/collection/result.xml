@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resumo>
+    <saft nomeEmpresaEmissora="Empresa Demonstrativa &amp; de Testes Lda."
+        data="2007-01-01">
+        <Product>
+            <ProductType>O</ProductType>
+            <ProductCode>OT Canetas</ProductCode>
+            <ProductGroup>3 Outros</ProductGroup>
+            <ProductDescription>Canetas</ProductDescription>
+            <ProductNumberCode>OT Canetas</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>PR LJ5P</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Laser Jet 5P</ProductDescription>
+            <ProductNumberCode>5609999000043</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>PR 720C</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Jet 720C</ProductDescription>
+            <ProductNumberCode>5609999000067</ProductNumberCode>
+        </Product>
+    </saft>
+    <saft nomeEmpresaEmissora="Empresa Demonstrativa &amp; de Testes Lda."
+        data="2007-02-01">
+        <Product>
+            <ProductType>O</ProductType>
+            <ProductCode>OT Canetas</ProductCode>
+            <ProductGroup>3 Outros</ProductGroup>
+            <ProductDescription>Canetas</ProductDescription>
+            <ProductNumberCode>OT Canetas</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>PR LJ5P</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Laser Jet 5P</ProductDescription>
+            <ProductNumberCode>5609999000043</ProductNumberCode>
+        </Product>
+        <Product>
+            <ProductType>P</ProductType>
+            <ProductCode>PR 720C</ProductCode>
+            <ProductGroup>1 Hardware</ProductGroup>
+            <ProductDescription>Impressora Jet 720C</ProductDescription>
+            <ProductNumberCode>5609999000067</ProductNumberCode>
+        </Product>
+    </saft>
+</resumo>

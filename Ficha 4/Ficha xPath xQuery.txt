@@ -1,0 +1,90 @@
+EX 2.4
+    for $x in doc("Catalog.xml")/CATALOG/CD
+    return element CD{
+    	$x/TITLE |
+    	$x/PRICE |
+    	$x/YEAR  |
+    	<AGE>{2020 - $x/YEAR}</AGE>
+    }
+
+P2
+EX1.3
+	//book[descendant::author[ends-with(text(),"Laurentiis")]]
+EX1.4
+	/bookstore/book[price <= 30]/title
+EX1.ultimo
+	/bookstore/book[title/contains(text(),"ay") or title/contains(text(),"ry")]
+
+EX2.2
+    for  $x in doc("bookstore.xml")//book
+    order by $x/title ascending
+    return ($x/title,$x/price)
+
+EX2.3
+	for $x in doc("bookstore.xml")/bookstore/book
+	return ($x/title, <authorNumber>{count($x//author)}</authorNumber> ) 
+EX2.4
+	for $b at $p in doc("bookstore.xml")/bookstore/book
+	return <title pos="{$p}">{$b/title/text()}</title>
+EX2.5
+	for $b  in doc("bookstore.xml")/bookstore/book
+	return if ($b/@category = "WEB")
+                then <book category = "WEB">
+                {
+                    $b/title,
+                    $b/author,
+                    $b/title}
+                    <price>{(75 div 100) * $b/price/text()} </price>
+                
+                </book>
+                else $b
+
+EX 2.6 
+element htlm{
+  element body{
+    element h1{
+      "Bookstore"
+    },
+    element table{
+      element tr {
+        <td>Titulo</td>,
+        <td>Year</td>,
+        <td>Price</td>
+      }, 
+      for $book in bookstore/book
+      return element tr{
+        <td>{$book/title/text()}</td>,
+        <td>{$book/year/text()}</td>,
+        <td>{$book/price/text()}</td>
+      }
+    }
+  }
+}
+EX 3 
+<resumo>
+{
+    let $x := doc("SAFT1.xml")/AuditFile/Header
+    return (
+    <saft nomeEmpresaEmissora =  "{$x/CompanyName/text()}"  
+              data ="{$x/StartDate/text()}">
+            {
+            for $p in doc("SAFT1.xml")/AuditFile/MasterFiles
+                return ($p/Product)
+             }
+    </saft>)
+}
+    
+{
+    let $s := doc("SAFT2.xml")/AuditFile/Header
+    return (
+    <saft nomeEmpresaEmissora =  "{$s/CompanyName/text()}"  
+              data ="{$s/StartDate/text()}">
+                {
+                 for $p2 in doc("SAFT1.xml")/AuditFile/MasterFiles
+                    return ($p2/Product)
+                }
+    </saft>)
+}
+</resumo>
+
+
