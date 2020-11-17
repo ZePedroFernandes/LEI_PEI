@@ -84,3 +84,5 @@ element resumo{
   for $x in AuditFile/SourceDocuments/SalesInvoices/Invoice/Line
   return local:getResumoIva($x)
 }
+
+validate:xsd("D:\Engenharia Informatica\2ºAno\1ºSemestre\PEI\Fichas\Ficha 5\FactDB\returnFile.xml","D:\Engenharia Informatica\2ºAno\1ºSemestre\PEI\Fichas\Ficha 5\FactDB\resumoIva.xsd")
