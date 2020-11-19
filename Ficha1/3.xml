@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menu>
+    <pizza>
+        <nome abbreviation="VEP">Veggie-Pizza</nome>
+        <precos currency="EURO">
+            <small>6.00</small>
+            <medium>8.00</medium>
+            <big>12.00</big>
+        </precos>
+        <base>tiny</base>
+        <toppings>
+            <ingrediente>spinach</ingrediente>
+            <ingrediente>cheese</ingrediente>
+            <ingrediente>tomato sauce</ingrediente>
+        </toppings>
+    </pizza>
+
+    <pizza>
+        <nome abbreviation="MZP">Mozzarella-Pizza</nome>
+        <precos currency="EURO">
+            <small>7.00</small>
+            <medium>8.50</medium>
+            <big>13.00</big>
+        </precos>
+        <base>crispy</base>
+        <toppings>
+            <ingrediente>cheese</ingrediente>
+            <ingrediente>oregano</ingrediente>
+            <ingrediente>onion sauce</ingrediente>
+        </toppings>
+    </pizza>
+
+    <pizza>
+        <nome abbreviation="MP">Meat-Pizza</nome>
+        <precos currency="EURO">
+            <small>6.00</small>
+            <medium>9.00</medium>
+            <big>12.50</big>
+        </precos>
+        <base>lean</base>
+        <toppings>
+            <ingrediente>chicken</ingrediente>
+            <ingrediente>oregano</ingrediente>
+            <ingrediente>tomato sauce</ingrediente>
+        </toppings>
+    </pizza>
+
+    <pizza>
+        <nome abbreviation="ESTGP">ESTG-Pizza</nome>
+        <precos currency="EURO">
+            <small>6.00</small>
+            <medium>8.50</medium>
+            <big>15.00</big>
+        </precos>
+        <base>tiny</base>
+        <toppings>
+            <ingrediente>spinach</ingrediente>
+            <ingrediente>cheese</ingrediente>
+            <ingrediente>tomato sauce</ingrediente>
+            <ingrediente>chicken</ingrediente>
+        </toppings>
+    </pizza>
+
+</menu>

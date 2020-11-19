@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<emails xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "1.1schema.xsd">
+    <email type = "Personal">
+        <to>tove@gmail.com</to>
+        <from>jani@gmail.com</from>
+        <date>2020-12-31T09:00:00</date>
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+    <email type = "Profissional">
+        <to>tove@gmail.com</to>
+        <from>jani@gmail.com</from>
+        <date>2020-12-31T09:00:00</date>
+        <heading>Reunião</heading>
+        <body>Olá, tudo bem?</body>
+    </email>
+</emails>

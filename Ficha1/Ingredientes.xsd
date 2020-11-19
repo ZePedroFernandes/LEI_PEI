@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    
+    <xs:simpleType name = "categorys">
+        <xs:restriction base = "xs:string">
+            <xs:enumeration value="Vegetal" />
+            <xs:enumeration value="Dairy" />
+            <xs:enumeration value="Sauce" />
+            <xs:enumeration value="Herb" />
+            <xs:enumeration value="Meat" />
+            <xs:enumeration value="Sauce" />
+            <xs:enumeration value="Pasta" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="units">
+        <xs:restriction base = "xs:string">
+            <xs:enumeration value = "grams"/>
+            <xs:enumeration value = "milliliters"/>
+            <xs:enumeration value = "unit"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name = "Ingredient">
+        <xs:sequence>
+            <xs:element name = "name" type = "xs:string"/>
+            <xs:element name = "category" type = "categorys"/>
+            <xs:element name = "calories" type = "xs:int"/>
+            <xs:element name = "unit" type = "units"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name = "Ingredients">
+        <xs:sequence maxOccurs="unbounded">
+            <xs:element name="Ingredient" type = "Ingredient"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name="Ingredients" type = "Ingredients"/>
+    
+</xs:schema>

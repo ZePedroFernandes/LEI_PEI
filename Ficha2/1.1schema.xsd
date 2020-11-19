@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:simpleType name="validEmail">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-z0-9._-]+)@([a-zA-z]+).([a-zA-Z]+)"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Profissional"/>
+            <xs:enumeration value="Personal"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="email">
+        <xs:sequence>
+            <xs:element name="to" type="validEmail"/>
+            <xs:element name="from" type="validEmail"/>
+            <xs:element name="date" type="xs:dateTime" minOccurs="0"/>
+            <xs:element name="heading" type="xs:string"/>
+            <xs:element name="body" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name = "type" type="emailType"/>
+    </xs:complexType>
+    
+    <xs:complexType name = "emails">
+        <xs:sequence>
+            <xs:element name = "email" type="email" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:element name = "emails" type="emails"/>
+    
+</xs:schema>

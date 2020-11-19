@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ingredients xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "ingredientTypes.xsd" 
+    xmlns = "zepedro/ingredientTypes"
+    xmlns:c = "zepedro/commonTypes">
+    <ingredient>
+        <name>Tomato Sauce</name>
+        <category>Vegetal</category>
+        <calories>18</calories>
+        <c:unit>grams</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Spinach</name>
+        <category>Vegetal</category>
+        <calories>18</calories>
+        <c:unit>grams</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Cheese</name>
+        <category>Dairy</category>
+        <calories>25</calories>
+        <c:unit>grams</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Tomato Sauce</name>
+        <category>Sauce</category>
+        <calories>40</calories>
+        <c:unit>milliliters</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Oregano</name>
+        <category>Herb</category>
+        <calories>45</calories>
+        <c:unit>grams</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Chicken</name>
+        <category>Meat</category>
+        <calories>32</calories>
+        <c:unit>grams</c:unit>   
+    </ingredient>
+    
+    <ingredient>
+        <name>Onion Sauce</name>
+        <category>Sauce</category>
+        <calories>55</calories>
+        <c:unit>milliliters</c:unit>
+    </ingredient>
+    
+    <ingredient>
+        <name>Pasta</name>
+        <category>Pasta</category>
+        <calories>43</calories>
+        <c:unit>milliliters</c:unit>
+    </ingredient>
+    
+</Ingredients>

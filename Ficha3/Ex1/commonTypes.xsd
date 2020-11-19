@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns = "zepedro/commonTypes"
+    targetNamespace="zepedro/commonTypes">
+    
+    <xs:simpleType name="positiveDouble">
+        <xs:annotation>
+            <xs:documentation>Rules for positive double values definition (ex:price)</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:double">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="currencyType">
+        <xs:annotation>
+            <xs:documentation>Rules for currency definition</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="EURO"/>
+            <xs:enumeration value="LB"/>
+            <xs:enumeration value="DOLAR"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="units">
+        <xs:annotation>
+            <xs:documentation>Enumeration that contains all the valid units</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value = "grams"/>
+            <xs:enumeration value = "milliliters"/>
+            <xs:enumeration value = "unit"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <!-- Elemento global-->
+    <xs:element name="unit" type="units">
+        <xs:annotation>
+            <xs:documentation>Unit element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Atributo global -->
+    <xs:attribute name="currency" type="currencyType">
+        <xs:annotation>
+            <xs:documentation>Currency attribute</xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+</xs:schema>

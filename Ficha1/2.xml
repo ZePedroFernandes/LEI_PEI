@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Ingredients xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "Ingredientes.xsd">
+    <Ingredient>
+        <name>Tomato</name>
+        <category>Vegetal</category>
+        <calories>18</calories>
+        <unit>grams</unit>
+    </Ingredient>
+    
+    <Ingredient>
+        <name>Spinach</name>
+        <category>Vegetal</category>
+        <calories>18</calories>
+        <unit>grams</unit>
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Cheese</name>
+        <category>Dairy</category>
+        <calories>25</calories>
+        <unit>grams</unit>
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Tomato Sauce</name>
+        <category>Sauce</category>
+        <calories>40</calories>
+        <unit>milliliters</unit>
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Oregano</name>
+        <category>Herb</category>
+        <calories>45</calories>
+        <unit>grams</unit>
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Chicken</name>
+        <category>Meat</category>
+        <calories>32</calories>
+        <unit>grams</unit>   
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Onion Sauce</name>
+        <category>Sauce</category>
+        <calories>55</calories>
+        <unit>milliliters</unit>
+    </Ingredient>
+        
+    <Ingredient>
+        <name>Pasta</name>
+        <category>Pasta</category>
+        <calories>43</calories>
+        <unit>milliliters</unit>
+    </Ingredient>
+        
+</Ingredients>

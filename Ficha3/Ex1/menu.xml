@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "mainTypes.xsd"
+    xmlns:c = "zepedro/commonTypes"
+    xmlns:i = "zepedro/ingredientTypes"
+    xmlns:p = "zepedro/pizza">
+    
+    <pizza>
+        <p:nome abbreviation="VEP">Veggie-Pizza</p:nome>
+        <p:precos c:currency="EURO">
+            <p:small>6.00</p:small>
+            <p:medium>8.00</p:medium>
+            <p:big>12.00</p:big>
+        </p:precos>
+        <p:base>Tiny</p:base>
+        <p:ingredients>
+            <i:ingredientName>Spinach</i:ingredientName>
+            <i:ingredientName>Cheese</i:ingredientName>
+            <i:ingredientName>Tomato Sauce</i:ingredientName>
+        </p:ingredients>
+    </pizza>
+    
+    <pizza>
+        <p:nome abbreviation="MZP">Mozzarella-Pizza</p:nome>
+        <p:precos c:currency="EURO">
+            <p:small>7.00</p:small>
+            <p:medium>8.50</p:medium>
+            <p:big>13.00</p:big>
+        </p:precos>
+        <p:base>Crispy</p:base>
+        <p:ingredients>
+            <i:ingredientName>Cheese</i:ingredientName>
+            <i:ingredientName>Oregano</i:ingredientName>
+            <i:ingredientName>Onion Sauce</i:ingredientName>
+        </p:ingredients>
+    </pizza>
+    
+    <pizza>
+        <p:nome abbreviation="MP">Meat-Pizza</p:nome>
+        <p:precos c:currency="EURO">
+            <p:small>6.00</p:small>
+            <p:medium>9.00</p:medium>
+            <p:big>12.50</p:big>
+        </p:precos>
+        <p:base>Lean</p:base>
+        <p:ingredients>
+            <i:ingredientName>Chicken</i:ingredientName>
+            <i:ingredientName>Oregano</i:ingredientName>
+            <i:ingredientName>Tomato Sauce</i:ingredientName>
+        </p:ingredients>
+    </pizza>
+    
+    <pizza>
+        <p:nome abbreviation="ESTGP">ESTG-Pizza</p:nome>
+        <p:precos c:currency="EURO">
+            <p:small>6.00</p:small>
+            <p:medium>8.50</p:medium>
+            <p:big>15.00</p:big>
+        </p:precos>
+        <p:base>Tiny</p:base>
+        <p:ingredients>
+            <i:ingredientName>Spinach</i:ingredientName>
+            <i:ingredientName>Cheese</i:ingredientName>
+            <i:ingredientName>Tomato Sauce</i:ingredientName>
+            <i:ingredientName>Chicken</i:ingredientName>
+        </p:ingredients>
+    </pizza>
+    
+</menu>

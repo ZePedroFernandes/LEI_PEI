@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fatura xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "faturaType.xsd"
+    xmlns:c="f3.ex2.commonTypes"
+    xmlns:p="f3.ex2.produto">
+    <moradaFaturacao>Rua Dr.Roberto Frias 712, 4200-465 Porto - Portugal</moradaFaturacao>
+    <moradaEnvio>ESCOLA SUPERIOR DE TECNOLOGIA E GESTAO Rua do Curral Casa do Curral, 4610-156 Felgueiras - Portugal</moradaEnvio>
+    <numero>1000254</numero>
+    <data>2010-10-15</data>
+    <tipoPagamento>Transferência</tipoPagamento>
+    <produto>
+        <nome>Router Asus</nome>
+        <numero>50</numero>
+        <preco c:currency = "EURO">53.99</preco>
+    </produto>
+    <produto>
+        <nome>Desktop DELL REF:4323E</nome>
+        <numero>20</numero>
+        <preco c:currency = "EURO">890.88</preco>
+    </produto>
+    
+    
+</fatura>

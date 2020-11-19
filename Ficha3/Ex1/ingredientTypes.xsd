@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:c = "zepedro/commonTypes"
+    xmlns = "zepedro/ingredientTypes"
+    targetNamespace="zepedro/ingredientTypes">
+    <xs:import namespace="zepedro/commonTypes" schemaLocation="commonTypes.xsd"/>
+    
+    <xs:element name="Ingredients">
+        <xs:annotation>
+            <xs:documentation>Root element</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element ref="ingredient"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:simpleType name = "categoryType">
+        <xs:annotation>
+            <xs:documentation>Rule that defines available categorys</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base = "xs:string">
+            <xs:enumeration value="Vegetal" />
+            <xs:enumeration value="Dairy" />
+            <xs:enumeration value="Sauce" />
+            <xs:enumeration value="Herb" />
+            <xs:enumeration value="Meat" />
+            <xs:enumeration value="Sauce" />
+            <xs:enumeration value="Pasta" />
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:simpleType name="ingredientName">
+        <xs:annotation>
+            <xs:documentation>Rule that defines all ingredient's names</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Spinach"/>
+            <xs:enumeration value="Cheese"/>
+            <xs:enumeration value="Tomato Sauce"/>
+            <xs:enumeration value="Oregano"/>
+            <xs:enumeration value="Chicken"/>
+            <xs:enumeration value="Onion Sauce"/>
+            <xs:enumeration value="Pasta"/>
+        </xs:restriction>
+    </xs:simpleType>
+    
+    <xs:complexType name="ingredientType">
+        <xs:annotation>
+            <xs:documentation>Rule that defines the ingredients</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="ingredientName"/>
+            <xs:element name="category" type="categoryType"/>
+            <xs:element name="calories" type= "xs:string"/>
+            <xs:element ref="c:unit"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <!-- Elemento global -->
+    <xs:element name="ingredient" type="ingredientType">
+        <xs:annotation>
+            <xs:documentation>ingredient global element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+    <!-- Elemento global -->
+    <xs:element name="ingredientName" type="ingredientName">
+        <xs:annotation>
+            <xs:documentation>ingredient's name global element</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    
+</xs:schema>

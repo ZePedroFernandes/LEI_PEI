@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified"
+    xmlns="f3.ex2.produto"
+    targetNamespace="f3.ex2.produto"
+    xmlns:c="f3.ex2.commonTypes">
+    <xs:import schemaLocation="commonTypes.xsd" namespace="f3.ex2.commonTypes"></xs:import>
+    
+    <!-- Elemento root -->
+    <xs:element name="produto" type="produtoType"/>
+    
+    <xs:complexType name="produtoType">
+        <xs:sequence>
+            <xs:element name="nome" type="xs:string"/>
+            <xs:element name="numero" type="xs:int"/>
+            <xs:element name="preco" type="c:precoType"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+</xs:schema>
