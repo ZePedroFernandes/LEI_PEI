@@ -9,25 +9,26 @@
 				'properties_unit', 
 				'properties_currency');
 var facetsBoxes= new Array('facets_unit', 
+				'facets_units', 
 				'facets_positiveDouble', 
 				'facets_currencyType', 
-				'facets_units', 
 				'facets_currency');
-var usedByBoxes= new Array('usedBy_currencyType', 
-				'usedBy_units');
+var usedByBoxes= new Array('usedBy_unit', 
+				'usedBy_units', 
+				'usedBy_currencyType');
 var sourceBoxes= new Array('source_unit', 
+				'source_units', 
 				'source_positiveDouble', 
 				'source_currencyType', 
-				'source_units', 
 				'source_currency');
 var diagramBoxes= new Array('diagram_unit', 
+				'diagram_units', 
 				'diagram_positiveDouble', 
-				'diagram_currencyType', 
-				'diagram_units');
+				'diagram_currencyType');
 var annotationBoxes= new Array('annotations_unit', 
+				'annotations_units', 
 				'annotations_positiveDouble', 
 				'annotations_currencyType', 
-				'annotations_units', 
 				'annotations_currency');
 
       
@@ -303,7 +304,7 @@ var annotationBoxes= new Array('annotations_unit',
                <td class="rt_cornerBottomRight"></td>
             </tr>
          </table>
-      </div><a id="commonTypes.xsd"></a><div class="componentTitle">Main schema <span class="qname">commonTypes.xsd</span></div>
+      </div><a id="commonTypes.xsd"></a><div class="componentTitle">Imported schema <span class="qname">commonTypes.xsd</span></div>
       <table class="rt">
          <tr>
             <td class="rt_cornerTopLeft"></td>
@@ -390,7 +391,7 @@ var annotationBoxes= new Array('annotations_unit',
                            <div class="floatRight"><input id="button_diagram_unit" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_unit');" class="control" /></div>
                         </td>
                         <td class="diagram">
-                           <div id="diagram_unit" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_xsd_Element_unit.jpeg" usemap="#commonTypes_xsd_Element_unit" /><map name="commonTypes_xsd_Element_unit" id="commonTypes_xsd_Element_unit"><area alt="commonTypes_xsd.tmp#units" href="commonTypes_xsd.html#units" coords="134,9,212,35" /></map></div>
+                           <div id="diagram_unit" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_xsd_Element_unit.jpeg" usemap="#commonTypes_xsd_Element_unit" /><map name="commonTypes_xsd_Element_unit" id="commonTypes_xsd_Element_unit"><area alt="commonTypes_xsd.tmp#units" href="commonTypes_xsd.html#units" coords="99,0,177,26" /></map></div>
                         </td>
                      </tr>
                      <tr>
@@ -448,6 +449,22 @@ var annotationBoxes= new Array('annotations_unit',
                      </tr>
                      <tr>
                         <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_unit" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_unit');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_unit" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Complex Type </td>
+                                    <td><b><a href="ingredientTypes_xsd.html#ingredientType" target="mainFrame" title="zepedro/ingredientTypes" onclick="updatePageTitle('Schema documentation for ingredientTypes.xsd')">ingredientType</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
                            <div class="floatLeft"><b>Source</b></div>
                            <div class="floatRight"><input id="button_source_unit" type="image" src="img/btM.gif" value="-" onclick="switchState('source_unit');" class="control" /></div>
                         </td>
@@ -461,6 +478,139 @@ var annotationBoxes= new Array('annotations_unit',
     </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Unit element</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:element&gt;</span></pre>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </td>
+            <td class="rt_lineRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_cornerBottomLeft"></td>
+            <td class="rt_lineBottom"></td>
+            <td class="rt_cornerBottomRight"></td>
+         </tr>
+      </table><a id="units"></a><div class="componentTitle">Simple Type <span class="qname">units</span></div>
+      <table class="rt">
+         <tr>
+            <td class="rt_cornerTopLeft"></td>
+            <td class="rt_lineTop"></td>
+            <td class="rt_cornerTopRight"></td>
+         </tr>
+         <tr>
+            <td class="rt_lineLeft"></td>
+            <td class="rt_content">
+               <table class="component">
+                  <tbody>
+                     <tr>
+                        <td class="firstColumn"><b>Namespace</b></td>
+                        <td>zepedro/commonTypes</td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Annotations</b></div>
+                           <div class="floatRight"><input id="button_annotations_units" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_units');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="annotations_units" style="display:block">
+                              <div class="annotation">
+                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                    <tr>
+                                       <td width="100%">
+                                          <pre><span class="tT">Enumeration that contains all the valid units</span></pre>
+                                       </td>
+                                    </tr>
+                                 </table>
+                              </div>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Diagram</b></div>
+                           <div class="floatRight"><input id="button_diagram_units" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_units');" class="control" /></div>
+                        </td>
+                        <td class="diagram">
+                           <div id="diagram_units" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_xsd_Simple_Type_units.jpeg" /></div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn"><b>Type</b></td>
+                        <td>restriction of <b>xs:string</b></td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Facets</b></div>
+                           <div class="floatRight"><input id="button_facets_units" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_units');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="facets_units" style="display:block">
+                              <table class="facetsTable">
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>grams</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>milliliters</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td class="firstColumn">enumeration</td>
+                                    <td width="30%"><b>unit</b></td>
+                                    <td>
+                                       <div class="annotation"></div>
+                                    </td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Used by</b></div>
+                           <div class="floatRight"><input id="button_usedBy_units" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_units');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="usedBy_units" style="display:block">
+                              <table class="usedByTable">
+                                 <tr>
+                                    <td class="firstColumn">Element </td>
+                                    <td><b><a href="commonTypes_xsd.html#unit" target="mainFrame" title="zepedro/commonTypes" onclick="updatePageTitle('Schema documentation for commonTypes.xsd')">unit</a></b></td>
+                                 </tr>
+                              </table>
+                           </div>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td class="firstColumn">
+                           <div class="floatLeft"><b>Source</b></div>
+                           <div class="floatRight"><input id="button_source_units" type="image" src="img/btM.gif" value="-" onclick="switchState('source_units');" class="control" /></div>
+                        </td>
+                        <td>
+                           <div id="source_units" style="display:block">
+                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
+                                 <tr>
+                                    <td width="100%">
+                                       <pre><span class="tEl">&lt;xs:simpleType</span><span class="tAN"> name=</span><span class="tAV">"units"</span><span class="tEl">&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enumeration that contains all the valid units</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"grams"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"milliliters"</span><span class="tEl">/&gt;</span><span class="tI">
+    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"unit"</span><span class="tEl">/&gt;</span><span class="tI">
+  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
+</span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre>
                                     </td>
                                  </tr>
                               </table>
@@ -693,139 +843,6 @@ var annotationBoxes= new Array('annotations_unit',
     </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"EURO"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"LB"</span><span class="tEl">/&gt;</span><span class="tI">
     </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"DOLAR"</span><span class="tEl">/&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
-</span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre>
-                                    </td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                  </tbody>
-               </table>
-            </td>
-            <td class="rt_lineRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_cornerBottomLeft"></td>
-            <td class="rt_lineBottom"></td>
-            <td class="rt_cornerBottomRight"></td>
-         </tr>
-      </table><a id="units"></a><div class="componentTitle">Simple Type <span class="qname">units</span></div>
-      <table class="rt">
-         <tr>
-            <td class="rt_cornerTopLeft"></td>
-            <td class="rt_lineTop"></td>
-            <td class="rt_cornerTopRight"></td>
-         </tr>
-         <tr>
-            <td class="rt_lineLeft"></td>
-            <td class="rt_content">
-               <table class="component">
-                  <tbody>
-                     <tr>
-                        <td class="firstColumn"><b>Namespace</b></td>
-                        <td>zepedro/commonTypes</td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Annotations</b></div>
-                           <div class="floatRight"><input id="button_annotations_units" type="image" src="img/btM.gif" value="-" onclick="switchState('annotations_units');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="annotations_units" style="display:block">
-                              <div class="annotation">
-                                 <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                    <tr>
-                                       <td width="100%">
-                                          <pre><span class="tT">Enumeration that contains all the valid units</span></pre>
-                                       </td>
-                                    </tr>
-                                 </table>
-                              </div>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Diagram</b></div>
-                           <div class="floatRight"><input id="button_diagram_units" type="image" src="img/btM.gif" value="-" onclick="switchState('diagram_units');" class="control" /></div>
-                        </td>
-                        <td class="diagram">
-                           <div id="diagram_units" style="display:block"><img alt="Diagram" border="0" src="img/commonTypes_xsd_Simple_Type_units.jpeg" /></div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn"><b>Type</b></td>
-                        <td>restriction of <b>xs:string</b></td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Facets</b></div>
-                           <div class="floatRight"><input id="button_facets_units" type="image" src="img/btM.gif" value="-" onclick="switchState('facets_units');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="facets_units" style="display:block">
-                              <table class="facetsTable">
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>grams</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>milliliters</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                                 <tr>
-                                    <td class="firstColumn">enumeration</td>
-                                    <td width="30%"><b>unit</b></td>
-                                    <td>
-                                       <div class="annotation"></div>
-                                    </td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Used by</b></div>
-                           <div class="floatRight"><input id="button_usedBy_units" type="image" src="img/btM.gif" value="-" onclick="switchState('usedBy_units');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="usedBy_units" style="display:block">
-                              <table class="usedByTable">
-                                 <tr>
-                                    <td class="firstColumn">Element </td>
-                                    <td><b><a href="commonTypes_xsd.html#unit" target="mainFrame" title="zepedro/commonTypes" onclick="updatePageTitle('Schema documentation for commonTypes.xsd')">unit</a></b></td>
-                                 </tr>
-                              </table>
-                           </div>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td class="firstColumn">
-                           <div class="floatLeft"><b>Source</b></div>
-                           <div class="floatRight"><input id="button_source_units" type="image" src="img/btM.gif" value="-" onclick="switchState('source_units');" class="control" /></div>
-                        </td>
-                        <td>
-                           <div id="source_units" style="display:block">
-                              <table style="table-layout:fixed;white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space: -o-pre-wrap;word-wrap: break-word;_white-space:pre;" class="preWrapContainer">
-                                 <tr>
-                                    <td width="100%">
-                                       <pre><span class="tEl">&lt;xs:simpleType</span><span class="tAN"> name=</span><span class="tAV">"units"</span><span class="tEl">&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:annotation</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:documentation</span><span class="tEl">&gt;</span><span class="tT" style="white-space:normal">Enumeration that contains all the valid units</span><span class="tEl">&lt;/xs:documentation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;/xs:annotation&gt;</span><span class="tI">
-  </span><span class="tEl">&lt;xs:restriction</span><span class="tAN"> base=</span><span class="tAV">"xs:string"</span><span class="tEl">&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"grams"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"milliliters"</span><span class="tEl">/&gt;</span><span class="tI">
-    </span><span class="tEl">&lt;xs:enumeration</span><span class="tAN"> value=</span><span class="tAV">"unit"</span><span class="tEl">/&gt;</span><span class="tI">
   </span><span class="tEl">&lt;/xs:restriction&gt;</span><span class="tI">
 </span><span class="tEl">&lt;/xs:simpleType&gt;</span></pre>
                                     </td>
