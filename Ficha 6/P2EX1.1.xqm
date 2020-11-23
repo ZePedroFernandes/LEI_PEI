@@ -13,4 +13,3 @@ declare %rest:path("/sumQuery")
           $number1 + $number2
         };
         
-        
