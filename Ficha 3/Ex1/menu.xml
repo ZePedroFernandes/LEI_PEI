@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menu xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "mainTypes.xsd"
-    xmlns:c = "zepedro/commonTypes"
-    xmlns:i = "zepedro/ingredientTypes"
-    xmlns:p = "zepedro/pizza">
-    
+<menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="mainTypes.xsd" xmlns:c="zepedro/commonTypes"
+    xmlns:i="zepedro/ingredientTypes" xmlns:p="zepedro/pizza">
+
     <pizza>
         <p:nome abbreviation="VEP">Veggie-Pizza</p:nome>
         <p:precos c:currency="EURO">
@@ -18,7 +17,7 @@
             <i:ingredientName>Tomato Sauce</i:ingredientName>
         </p:ingredients>
     </pizza>
-    
+
     <pizza>
         <p:nome abbreviation="MZP">Mozzarella-Pizza</p:nome>
         <p:precos c:currency="EURO">
@@ -33,7 +32,7 @@
             <i:ingredientName>Onion Sauce</i:ingredientName>
         </p:ingredients>
     </pizza>
-    
+
     <pizza>
         <p:nome abbreviation="MP">Meat-Pizza</p:nome>
         <p:precos c:currency="EURO">
@@ -48,7 +47,7 @@
             <i:ingredientName>Tomato Sauce</i:ingredientName>
         </p:ingredients>
     </pizza>
-    
+
     <pizza>
         <p:nome abbreviation="ESTGP">ESTG-Pizza</p:nome>
         <p:precos c:currency="EURO">
@@ -64,5 +63,5 @@
             <i:ingredientName>Chicken</i:ingredientName>
         </p:ingredients>
     </pizza>
-    
+
 </menu>

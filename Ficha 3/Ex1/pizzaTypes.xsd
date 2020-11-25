@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
-    xmlns:c = "zepedro/commonTypes"
-    xmlns:i = "zepedro/ingredientTypes"
-    xmlns = "zepedro/pizza"
+    xmlns:c="zepedro/commonTypes" xmlns:i="zepedro/ingredientTypes" xmlns="zepedro/pizza"
     targetNamespace="zepedro/pizza">
     <xs:import schemaLocation="ingredientTypes.xsd" namespace="zepedro/ingredientTypes"/>
     <xs:import schemaLocation="commonTypes.xsd" namespace="zepedro/commonTypes"/>
-    
+
     <xs:element name="pizza" type="pizza"/>
-    
-    <xs:complexType name = "pizzaName">
+
+    <xs:complexType name="pizzaName">
         <xs:simpleContent>
             <xs:extension base="xs:string">
                 <xs:attribute name="abbreviation" type="xs:string"/>
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
-    
+
     <xs:complexType name="pizzaPrice">
         <xs:sequence>
             <xs:element name="small" type="c:positiveDouble"/>
             <xs:element name="medium" type="c:positiveDouble"/>
             <xs:element name="big" type="c:positiveDouble"/>
         </xs:sequence>
-        <xs:attribute ref="c:currency"></xs:attribute>
+        <xs:attribute ref="c:currency"/>
     </xs:complexType>
-    
+
     <xs:simpleType name="baseType">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Tiny"/>
@@ -33,21 +31,21 @@
             <xs:enumeration value="Lean"/>
         </xs:restriction>
     </xs:simpleType>
-    
+
     <xs:complexType name="pizza">
         <xs:sequence>
-            <xs:element name="nome" type = "pizzaName"/>
+            <xs:element name="nome" type="pizzaName"/>
             <xs:element name="precos" type="pizzaPrice"/>
             <xs:element name="base" type="baseType"/>
             <xs:element name="ingredients">
                 <xs:complexType>
                     <xs:sequence maxOccurs="unbounded">
-                        <xs:element ref="i:ingredientName"></xs:element>
+                        <xs:element ref="i:ingredientName"/>
                     </xs:sequence>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-    
-    
+
+
 </xs:schema>

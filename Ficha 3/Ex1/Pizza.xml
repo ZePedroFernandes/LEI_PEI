@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pizza xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "pizzaTypes.xsd"
-    xmlns:c = "zepedro/commonTypes"
-    xmlns:i = "zepedro/ingredientTypes"
-    xmlns = "zepedro/pizza">
+<pizza xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="pizzaTypes.xsd" xmlns:c="zepedro/commonTypes"
+    xmlns:i="zepedro/ingredientTypes" xmlns="zepedro/pizza">
     <nome abbreviation="VEP">Veggie-Pizza</nome>
     <precos c:currency="EURO">
         <small>6.00</small>
@@ -15,5 +14,5 @@
         <i:ingredientName>Oregano</i:ingredientName>
         <i:ingredientName>Tomato Sauce</i:ingredientName>
     </ingredients>
-    
+
 </pizza>
