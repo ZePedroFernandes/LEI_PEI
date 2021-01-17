@@ -1,0 +1,44 @@
+1.1 db.restaurants.find({},{restaurant_id:1,name:1,borough:1,cuisine:1}).pretty()
+
+1.2 db.restaurants.find({"grades":{$elemMatch:{"score":{$gt:75,$lt:100}}}}).pretty()
+
+1.3 db.restaurants.find({"grades":{$elemMatch:{"score":{$lte:5}}}},{"_id":0,"restaurant_id":1,"name":1,"grades.score":1})
+
+1.4 db.restaurants.find({"cuisine":"Bakery"},{"grades.score":1,"cuisine":1,"_id":1}).sort({"grades.score":-1})
+
+1.5 db.restaurants.find({"cuisine":"American","grades.score": {$gt:75}, $or :[{"borough":"Queens"},{"borough":"Brooklyn"},{"borough":"Staten Island"}]},{"borough":1,"restaurant_id":1,"name":1}).pretty()
+
+1.6 db.restaurants.find({"cuisine":"Bakery","grades":{$elemMatch:{score:{$gt:75,$lt:100}}}})
+
+1.7 db.restaurants.find({"grades.grade":"A","grades":{$elemMatch:{score:{$gt:10,$lt:13}}}})
+
+1.8 db.restaurants.find({"cuisine":"American"},{name:1,"grades":{$slice:-3}})
+
+1.9 db.restaurants.find({$or: [{grades:{$exists: false}},{grades:null}]},{name:1,cuisine:1,address:1,borough:1})
+
+1.10 db.restaurants.find({"address.coord":{$elemMatch:{$gt:70,$lt:90}}},{address:1,name:1})
+
+2.1 var cursor = db.restaurants.find({"address.building":"2300"})
+
+2.2 while(cursor.hasNext()){ db.buildingRestaurants.insert(cursor.next());}
+
+2.3 db.buildingRestaurants.find()
+
+
+Parte II
+db.orders.insert({CustomerID : 1265, StoreID : 1, Product : "Almonds", Quantity : 200, Price : 12})
+db.orders.insert({CustomerID : 1265, StoreID : 1, Product : "Cashews", Quantity : 220, Price : 9})
+db.orders.insert({CustomerID : 1265, StoreID : 1, Product : "Pine Nuts", Quantity : 120, Price : 15})
+db.orders.insert({CustomerID : 3782, StoreID : 2, Product : "Pecans", Quantity : 160, Price : 20})
+db.orders.insert({CustomerID : 3782, StoreID : 2, Product : "Almonds", Quantity : 120, Price : 30})
+db.orders.insert({CustomerID : 4029, StoreID : 1, Product : "Almonds", Quantity : 50, Price : 5})
+db.orders.insert({CustomerID : 4029, StoreID : 1, Product : "Cashews", Quantity : 25, Price : 10})
+db.orders.insert({CustomerID : 4029, StoreID : 1, Product : "Peanuts", Quantity : 250, Price : 35})
+db.orders.insert({CustomerID : 4029, StoreID : 3, Product : "Pecans", Quantity : 150, Price : 10})
+
+
+2.1 db.orders.aggregate( [{$match: {StoreID:1} }, {$group: { _id: "$StoreID" , total: {$sum: {$multiply: ["$Price","$Quantity"] } } }}])
+
+2.2 Passo 1 (match do cliente): db.orders.aggregate( {$match: {CustomerID : 4029} } )
+    Passo 2 (Match das almondegas e group da loja): db.orders.aggregate( [ {$match: {Product:"Almonds"} } , {$group: {_id: "$StoreID", totalUnits: {$sum:"$Quantity"}} }] )
+    Resposta (match do cliente, macth das almondegas e group das lojas): db.orders.aggregate( [{$match:{CustomerID:4029} }, {$match: {Product:"Almonds"} } , {$group: {_id: "$StoreID", totalUnits: {$sum:"$Quantity"}} }] )
